@@ -1,9 +1,26 @@
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+
 body {
     display: flex;
+    background-color: rgb(238, 238, 237);
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
 fieldset {
     position: relative;
+}
+
+@font-face {
+    font-family: logo-font;
+    src: url(./font/Norse-Bold.otf);
 }
 
 #sec {
@@ -11,9 +28,135 @@ fieldset {
     flex-direction: row;
 }
 
+#left-section {
+    display: flex;
+    justify-content: center;
+}
+
+#backsplash {
+    margin: 0px;
+    padding: 0px;
+    width: 40em;
+    min-height: 100vh;
+    object-fit: cover;
+    overflow: auto;
+}
+
+#logo-header {
+    position: absolute;
+    top: 30%;
+
+    margin: 0px;
+    padding: 0px;
+
+    width: 40em;
+    height: auto;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.377);
+}
+
+#img-att {
+    margin: inherit;
+    padding: inherit;
+    position: absolute;
+
+    top: 95%;
+
+    color: bisque;
+}
+
+.a {
+    color: bisque;
+
+}
+
+#logo {
+    width: 100px;
+    height: auto;
+}
+
+#logo-txt {
+    font-family: logo-font, 'Courier New', Courier, monospace;
+    color: rgb(253, 246, 246);
+    font-size: 5em;
+
+    padding: 0%;
+    margin: 0%;
+}
+
+#right-section {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+#cta {
+    margin: 20px;
+    padding: 10px;
+    margin-right: 30%;
+    margin-top: 8%;
+}
+
+.cta-font {
+    font-size: 4vh;
+    font-weight: 600;
+}
+
+#fillable-forms {
+    background-color: rgb(250, 243, 243);
+    box-shadow: 5px 5px 5px rgb(44, 44, 44);
+
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+#fillable-forms>p {
+    font-size: 5vh;
+    font-weight: 600;
+}
+
 .forms {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: flex-start;
+    width: 20%;
+}
+
+.forms>div {
+    display: flex;
+    flex-direction: column;
+    padding-right: 10px;
+    width: 95%;
+}
+
+input {
+    border-color: #E5E7EB;
+    border-width: 1px;
+    border-radius: 4px;
+    width: 100%;
+
+    font-size: 2vh;
+}
+
+label {
+    font-size: 2vh;
+    color: rgb(49, 49, 49);
+}
+
+input:invalid {
+    border-color: red;
+}
+
+input:focus {
+    border-color: blue;
+    border-width: 1px;
+    box-shadow: 2px 2px 2px grey;
 }
